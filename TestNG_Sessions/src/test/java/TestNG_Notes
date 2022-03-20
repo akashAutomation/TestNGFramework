@@ -1,0 +1,60 @@
+ 1. It is an open source automated TestNG framework. In TestNG, NG stands for "Next Generation".
+ 2. TestNG is a testing framework inspired from JUnit and NUnit.
+ 3. It is for the Java programming language.
+ 4. It covers a broader range of test categories: unit, functional, end-to-end, integration, etc.
+ 
+ 4. Advantages --> 1. TestNG provides HTML reports by default for test execution. You can even add your own custom reports when required.
+				   2. Annotations made testers life easy
+				   3. Test cases can be Grouped & Prioritized more easily
+                   4. Parallel testing is possible
+                   5. Generates Logs
+                   6. Data Parameterization is possible --> This feature allows you to pass the arguments as parameters and this achieved by using @Parameters annotation
+                   7. To achieve the data-driven testing, DataProvider feature is used.
+                   8. 
+                   
+                   
+  TestNG Annotations --> 1. TestNG annotations are the code that is written inside your source test code logic to control the flow of the execution of tests. 
+  						 2.	It is essential to annotate your methods in TestNG to run the tests. 
+  						 3.	TestNG will ignore the method which does not contain an annotation since it won't know when to execute this method.
+						 4.	A TestNG annotation starts from the symbol "@".   
+						 
+  Types of TestNG Annotations -->
+  		1. @BeforeSuite - The @BeforeSuite method in TestNG runs before the execution of all other test methods in the suite.
+		2. @AfterSuite - The @AfterSuite method in TestNG runs after the execution of all other test methods in the suite.
+		3. @BeforeTest - The @BeforeTest method in TestNG runs before the execution of all the test methods of available classes belonging to that folder.
+		4. @AfterTest - The @AfterTest method in TestNG executes after the execution of all the test methods of available classes belonging to that folder.
+		5. @BeforeClass - The @BeforeClass method in TestNG will run before the first method of the current class is invoked.
+		6. @AfterClass - The @AfterClass method in TestNG will execute after the execution of all the test methods of the current class.
+		7. @BeforeMethod - The @BeforeMethod method in TestNG will execute before each test method.
+		8. @AfterMethod - The @AfterMethod method in TestNG will run after each test method is executed.
+		9. @BeforeGroups - The @BeforeGroups annotated method run only once for a group before the execution of all test cases belonging to that group.
+		10. @AfterGroups - The @AfterGroups annotated method run only once for a group after the execution of all test cases belonging to that group.
+						               
+                   
+  Hierarchy of the TestNG Annotations:
+   		1. @BeforeSuite
+		2. @BeforeTest
+		3. @BeforeClass
+		4. @BeforeMethod
+		5. @Test
+		6. @AfterMethod
+		7. @AfterClass
+		8. @AfterTest
+		9. @AfterSuite                 
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
