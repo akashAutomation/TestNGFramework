@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Different testng features test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>20/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 20 14:24:04 IST 2022</td>
+<td>Started on:</td><td>Tue Mar 22 22:55:49 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>250 seconds (250147 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12661 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -78,9 +78,11 @@ function toggleAllBoxes() {
 <td title='com.Demo.AssertionDemo.getTitle()'><b>getTitle</b><br>Test class: com.Demo.AssertionDemo</td>
 <td><div><pre>java.lang.AssertionError: title is not matched expected [abc] but found [Register]
 	at com.Demo.AssertionDemo.getTitle(AssertionDemo.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1808527451", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1808527451'><pre>java.lang.AssertionError: title is not matched expected [abc] but found [Register]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace280264402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace280264402'><pre>java.lang.AssertionError: title is not matched expected [abc] but found [Register]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
@@ -99,25 +101,12 @@ function toggleAllBoxes() {
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
 </pre></div></td>
 <td>0</td>
-<td>com.Demo.AssertionDemo@6aba2b86</td></tr>
+<td>com.Demo.AssertionDemo@44ebcd03</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -127,105 +116,55 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.Demo.DependsOnMethodsDemo.selectCountry()'><b>selectCountry</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
+<td title='com.Demo.DependsOnMethodsDemo.login()'><b>login</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.DependsOnMethodsDemo@2e005c4b</td></tr>
-<tr>
-<td title='com.Demo.GroupsDemo.enterName()'><b>enterName</b><br>Test class: com.Demo.GroupsDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
-<tr>
-<td title='com.Demo.GroupsDemo.test3()'><b>test3</b><br>Test class: com.Demo.GroupsDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.enterName()'><b>enterName</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>4</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
+<td>com.Demo.DependsOnMethodsDemo@a514af7</td></tr>
 <tr>
 <td title='com.Demo.DependsOnMethodsDemo.registratioPage()'><b>registratioPage</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.DependsOnMethodsDemo@2e005c4b</td></tr>
-<tr>
-<td title='com.Demo.GroupsDemo.test1()'><b>test1</b><br>Test class: com.Demo.GroupsDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.abc()'><b>abc</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.getTitle()'><b>getTitle</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.test1()'><b>test1</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.test3()'><b>test3</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.GroupsDemo.homePage()'><b>homePage</b><br>Test class: com.Demo.GroupsDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.Abc()'><b>Abc</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.Test1()'><b>Test1</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
-<tr>
-<td title='com.Demo.DependsOnMethodsDemo.homePage()'><b>homePage</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.DependsOnMethodsDemo@2e005c4b</td></tr>
-<tr>
-<td title='com.Demo.PriorityDemo.test2()'><b>test2</b><br>Test class: com.Demo.PriorityDemo</td>
-<td></td>
-<td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
+<td>com.Demo.DependsOnMethodsDemo@a514af7</td></tr>
 <tr>
 <td title='com.Demo.GroupsDemo.test2()'><b>test2</b><br>Test class: com.Demo.GroupsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
 <tr>
-<td title='com.Demo.PriorityDemo.ABC()'><b>ABC</b><br>Test class: com.Demo.PriorityDemo</td>
+<td title='com.Demo.GroupsDemo.enterName()'><b>enterName</b><br>Test class: com.Demo.GroupsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
 <tr>
-<td title='com.Demo.DependsOnMethodsDemo.login()'><b>login</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
+<td title='com.Demo.GroupsDemo.test1()'><b>test1</b><br>Test class: com.Demo.GroupsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.DependsOnMethodsDemo@2e005c4b</td></tr>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
 <tr>
 <td title='com.Demo.GroupsDemo.abc()'><b>abc</b><br>Test class: com.Demo.GroupsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.GroupsDemo@6356695f</td></tr>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
 <tr>
-<td title='com.Demo.PriorityDemo.Test4()'><b>Test4</b><br>Test class: com.Demo.PriorityDemo</td>
+<td title='com.Demo.DependsOnMethodsDemo.selectCountry()'><b>selectCountry</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
 <td></td>
 <td>0</td>
-<td>com.Demo.PriorityDemo@4f18837a</td></tr>
+<td>com.Demo.DependsOnMethodsDemo@a514af7</td></tr>
+<tr>
+<td title='com.Demo.GroupsDemo.homePage()'><b>homePage</b><br>Test class: com.Demo.GroupsDemo</td>
+<td></td>
+<td>0</td>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
+<tr>
+<td title='com.Demo.DependsOnMethodsDemo.homePage()'><b>homePage</b><br>Test class: com.Demo.DependsOnMethodsDemo</td>
+<td></td>
+<td>0</td>
+<td>com.Demo.DependsOnMethodsDemo@a514af7</td></tr>
+<tr>
+<td title='com.Demo.GroupsDemo.test3()'><b>test3</b><br>Test class: com.Demo.GroupsDemo</td>
+<td></td>
+<td>0</td>
+<td>com.Demo.GroupsDemo@4fb61f4a</td></tr>
 </table><p>
 </body>
 </html>

@@ -3,6 +3,7 @@ package com.Demo;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -36,6 +37,7 @@ public class BasicDemo {
 	public void enterName() {
 		driver.findElement(By.xpath("//input[@placeholder='First Name']")).sendKeys("akash");  
         driver.findElement(By.xpath("//input[@placeholder='Last Name']")).sendKeys("gupta");
+        
 	}
 	
 	@Test

@@ -33,7 +33,7 @@ public class TestNgBasics {
 		System.out.println("@BeforeClass --> enter url");
 	}
 	
-	@BeforeMethod
+	@BeforeMethod()
 	public void login() {
 		System.out.println("@BeforeMethod --> login");
 	}

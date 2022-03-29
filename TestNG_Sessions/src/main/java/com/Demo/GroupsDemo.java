@@ -4,7 +4,10 @@ package com.Demo;
 import org.testng.annotations.Test;
 
 public class GroupsDemo {
-	// 1. By using groups method we can segregate our test cases in groups.
+	/*
+	 * 1. By using groups method we can segregate our test cases in groups. 
+	 * 2. We can provide multiple groups in a single @Test methods. These groups are called MetaGroups.
+	 */
 	
 	@Test(groups="a")
 	public void enterName() {
@@ -26,7 +29,7 @@ public class GroupsDemo {
 		System.out.println("test 1");
 	}
 	
-	@Test(groups="test")
+	@Test(groups={"test","b", "c"})
 	public void test2() {
 		System.out.println("test 2");
 	}

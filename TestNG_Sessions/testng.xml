@@ -1,17 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="TestNG Framework">
-	<test name="Different testng features test">
+	<test name="Different testng features test" parallel="methods" thread-count="4">
 		<parameter name="url" value="http://demo.automationtesting.in/Register.html"/>
 		<parameter name="firstName" value="Akash"/>
 		<parameter name="lastName" value="Gupta"/>
 		
 		<classes>
-			<!-- <class name="com.Demo.AssertionDemo"/>
+			 <class name="com.Demo.AssertionDemo"/>
 			<class name="com.Demo.DependsOnMethodsDemo"/>
 			<class name="com.Demo.GroupsDemo"/>
-			<class name="com.Demo.PriorityDemo"/> -->
-			
-			<class name="com.Demo.ParameterTest"/>
+			<!-- <class name="com.Demo.PriorityDemo"/>  			
+			<class name="com.Demo.ParameterTest"/> -->
 		</classes>
 	
 	</test>

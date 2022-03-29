@@ -1,5 +1,8 @@
 package com.Demo;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -34,6 +37,19 @@ public class DataProviderDemo {
 		return data;
 	}
 	
+	@DataProvider()
+	public Iterator<Object[]> usingArrayList() {
+		Object[] data = {"a","b"};
+		Object[] data1 = {"c","d"};
+		
+		ArrayList<Object[]> value = new ArrayList<Object[]>();
+		value.add(data);
+		value.add(data1);
+		
+		return value.iterator();
+		
+	}
+	
 	
 	@Test(dataProvider="username") // using DataProvider method by its name
 	public void test1(String fname, String lname) {
@@ -49,7 +65,13 @@ public class DataProviderDemo {
 	
 	@Test(dataProvider="c", dataProviderClass = ParameterTest.class) // using DataProvider method without its name, only using method name
 	public void test3(String fname) {
-		System.out.println("test2");
+		System.out.println("test3");
 		System.out.println("fname = "+fname);
+	}
+	
+	@Test(dataProvider="usingArrayList") // using DataProvider method without its name, only using method name
+	public void test4(String fname, String lname) {
+		System.out.println("test4");
+		System.out.println("fname = "+fname+" , lname = "+lname);
 	}
 }
