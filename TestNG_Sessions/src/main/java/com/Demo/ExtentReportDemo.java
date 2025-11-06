@@ -13,7 +13,20 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.support.BaseController;
 
+import java.lang.reflect.Method;
+
 public class ExtentReportDemo extends BaseController{
+
+/*
+    Extent Reports is a third-party Java library used to create detailed, interactive, and customizable test execution reports.
+    It integrates seamlessly with TestNG, JUnit, and Selenium WebDriver, and supports features like:
+    - Test status (pass/fail/skip)
+    - Screenshots on failure
+    - Logs and metadata
+    - Categorization by test class, method, or tags
+    - HTML output with charts and filters
+
+*/
 
 	public ExtentReports extent;
 	public ExtentTest logger;
@@ -33,23 +46,23 @@ public class ExtentReportDemo extends BaseController{
 	}
 	
 	@BeforeMethod
-	public void setUp() throws InterruptedException {
+	public void setUp(Method method) throws InterruptedException {
 		setProperty();
 		openBrowser();
 		openUrl();
-	}
+        logger = extent.startTest(method.getName());
+
+    }
 	
 	@Test
 	public void test1() {
 		System.out.println("test1");
-		logger = extent.startTest("test1"); 
 		Assert.assertEquals(true, false);
 	}
 	
 	@Test
 	public void test2() {
 		System.out.println("test2");
-		logger = extent.startTest("test2"); 
 		Assert.assertEquals(true, true);
 	}
 	

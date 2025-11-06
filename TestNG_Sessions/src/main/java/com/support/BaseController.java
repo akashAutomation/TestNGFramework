@@ -3,6 +3,7 @@ package com.support;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
@@ -20,7 +21,7 @@ public class BaseController {
 	public static WebDriver driver;
 	
 	public static void setProperty() {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\akash\\Downloads\\driver\\chromedriver.exe");
 	}
 	
 	public static void openBrowser() {
@@ -35,8 +36,8 @@ public class BaseController {
 	    driver.manage().deleteAllCookies();     //delete all the cookies
 	        
 	    //dynamic wait
-	    driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 	    driver.get("http://demo.automationtesting.in/Register.html");
 	    try {
 			Thread.sleep(3000);

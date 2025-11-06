@@ -16,12 +16,16 @@ public class DataProviderDemo {
 	 * 5. A method which is annotated with @DataProvider is must return either Object[][] or Object[] or Iterator<Object[]> or Iterator<Object>, 
 	 *    not class java.lang.Object otherwise throw "TestNGException".
 	 *     
-	 * 6. DataProvider can have a name, and it will be used in other methods by using its name.
-	 * 7. We can also use DataProvider methods by using method name 
+	 * 6. DataProvider can have a explicit name, and it will be used in other methods by using its name. For this you can use
+	 *    name attribute.
+	 *    ex: @DataProvider(name="username")
+	 * 7. We can also call DataProvider methods by using method name only if it does not have any explicit name. If it has a explicit name
+	 *    then you need to call it by name only. If you still want to call by method name then you need to remove explicit name.
 	 * 8. We have to pass same number arguments in the data otherwise throw "MethodMatcherException" - Data provider mismatch
 	 * 9. Pass exact method name or DataProvider name otherwise throw "TestNGException"
-	 * 10. If DataProvider method is present in another class then we have to use dataProviderClass method and pass the class name.
-	 *     ex. dataProviderClass = ParameterTest.class
+	 * 10. If DataProvider method is present in another class then we have to use "dataProviderClass" method and pass the class name. And also require
+	 *     dataProvider name.
+	 *     ex. @Test(dataProvider="c", dataProviderClass = ParameterTest.class)
 	 * 
 	 */
 	

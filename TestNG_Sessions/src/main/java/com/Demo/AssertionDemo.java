@@ -13,12 +13,17 @@ public class AssertionDemo {
   				       
 	 * 1. Soft Assert collects error during @Test. 
 	 * 2. Soft Assert does not throw any exception when an assert fails and would continue with the next step after the assert statement.
-	 * 3. If there is any exception and you want to throw it then you need to use assertAll() method as a last statement in the
+	 * 3. If there is any exception, and you want to throw it then you need to use assertAll() method as a last statement in the
      *    @Test and test suite again continue with the next @Test as it is.
      * 4. If you want to that test case marked as failed where we have use soft assertions then use assertAll() in last statement, 
      * 	  otherwise test case will be marked as passed. 
      * 
      * 5. Create SoftAssert object in each method otherwise it will give all the assertions of (previous methods + current method) .
+     *
+     * 6. - Each @Test method is independent unless explicitly linked.
+     *      Even though test1() fails due to a hard assertion, TestNG will still execute test2() and test3() because each test method
+     *      is independent unless explicitly linked via dependsOnMethods.
+
 	 */
 	
 	SoftAssert sfa = new SoftAssert();
@@ -41,7 +46,7 @@ public class AssertionDemo {
 		
 		System.out.println("click on radio button");
 		
-		sfa.assertAll(); // it will marked testcase as failed.
+		sfa.assertAll(); // it will mark testcase as failed.
 	}
 	
 	@Test
@@ -51,7 +56,7 @@ public class AssertionDemo {
 		
 		sfa.assertEquals(true, false, "test3 failed");  // soft assert
 		
-		sfa.assertAll(); // it will marked testcase as failed.
+		sfa.assertAll(); // it will mark testcase as failed.
 	}
 		
 	

@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 public class EnabledDemo {
 
-	// If you want to not execute any test case then set enabled method as false. 
+	// If you do not want to execute any test case then set enabled method as false.
 	
 	@Test() 
 	public void test1() {

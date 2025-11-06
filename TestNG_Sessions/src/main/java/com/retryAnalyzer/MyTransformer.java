@@ -13,7 +13,7 @@ public class MyTransformer implements IAnnotationTransformer{
 	 *    and it's all parameters will be passed at run time and then retry() will be called for each failed cases.
 	 */
 	
-	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstrutor, Method testMethod) {
+	public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
 		annotation.setRetryAnalyzer(RetryAnalyzer.class);
 	}
 	

@@ -14,7 +14,7 @@ public class test {
 //		String formatter = DateTimeFormatter.ofPattern( "yyyy_MM_dd_HH_mm_ss" ).format(LocalDateTime.now());
 //		System.out.println(formatter);
 		
-		String s =System.getProperty("user.dir")+"\\test-output\\ExtentReport.html";
+		String s =System.getProperty("user.dir");
 		System.out.println(s);
 
 	}

@@ -7,11 +7,12 @@
 		<parameter name="lastName" value="Gupta"/>
 		
 		<classes>
-			 <class name="com.Demo.AssertionDemo"/>
-			<class name="com.Demo.DependsOnMethodsDemo"/>
-			<class name="com.Demo.GroupsDemo"/>
-			<!-- <class name="com.Demo.PriorityDemo"/>  			
-			<class name="com.Demo.ParameterTest"/> -->
+<!--			 <class name="com.Demo.AssertionDemo"/>-->
+<!--			<class name="com.Demo.DependsOnMethodsDemo"/>-->
+<!--			<class name="com.Demo.GroupsDemo"/>-->
+<!--			 <class name="com.Demo.PriorityDemo"/>-->
+<!--			<class name="com.Demo.ParameterTest"/>-->
+            <class name="com.Demo.ParallelDemo"/>
 		</classes>
 	
 	</test>

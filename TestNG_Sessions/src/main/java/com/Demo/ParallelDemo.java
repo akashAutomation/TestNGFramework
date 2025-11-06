@@ -15,66 +15,68 @@ import org.testng.annotations.Test;
 import com.support.BaseController;
 
 public class ParallelDemo extends BaseController{
-	WebDriver driver;
+   /*
+        1. ThreadLocal in Java is a special class that allows you to create variables that are local to each thread — meaning
+           every thread gets its own independent copy of the variable.
+        2. In multi-threaded environments (like parallel TestNG tests), shared variables like WebDriver can cause
+           race conditions, unexpected behavior, or test failures. ThreadLocal solves this by isolating the variable per thread.
+    */
+    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-//	@BeforeMethod
-//	public void setup() {
-//		System.out.println("setup "+Thread.currentThread().getId());
-//		setProperty();
-//		driver = new ChromeDriver();
-//		//openBrowser();
-//		
-//	}
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
+
+	@BeforeMethod
+	public void setup() {
+		System.out.println("setup "+Thread.currentThread().getId());
+		setProperty();
+        driver.set(new ChromeDriver());
+
+	}
 	
 	@Test
 	public void test1() {
 		System.out.println("test 1 "+Thread.currentThread().getId());
-		setProperty();
-		driver = new ChromeDriver();
-		driver.get("http://demo.automationtesting.in/Register.html");
-		driver.quit();
+        getDriver().get("http://demo.automationtesting.in/Register.html");
 	}
 	
 	@Test
 	public void test2() {
 		System.out.println("test 2 "+Thread.currentThread().getId());
-		setProperty();
-		driver = new ChromeDriver();
-		driver.get("http://demo.automationtesting.in/Register.html");
-		driver.quit();
+        getDriver().get("http://demo.automationtesting.in/Register.html");
 	}
 	
 	@Test
 	public void test3() {
 		System.out.println("test 3 "+Thread.currentThread().getId());
-		driver.get("http://demo.automationtesting.in/Register.html");
+        getDriver().get("http://demo.automationtesting.in/Register.html");
 	}
 	
 	@Test
 	public void test4() {
 		System.out.println("test 4 "+Thread.currentThread().getId());
-		setProperty();
-		driver = new ChromeDriver();
-		driver.get("http://demo.automationtesting.in/Register.html");
-		driver.quit();
+        getDriver().get("http://demo.automationtesting.in/Register.html");
 	}
-//	
-//	@Test
-//	public void test5() {
-//		System.out.println("test 5 "+Thread.currentThread().getId());
-//
-//	}
-//	
-//	@Test
-//	public void test6() {
-//		System.out.println("test 6 "+Thread.currentThread().getId());
-//
-//	}
+
+	@Test
+	public void test5() {
+		System.out.println("test 5 "+Thread.currentThread().getId());
+
+	}
+
+	@Test
+	public void test6() {
+		System.out.println("test 6 "+Thread.currentThread().getId());
+
+	}
 	
-	@AfterSuite
+	@AfterMethod
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(2000);
-		
-		driver.quit();
-	}
+
+        getDriver().quit();
+        driver.remove();
+
+    }
 }

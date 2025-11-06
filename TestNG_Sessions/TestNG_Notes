@@ -19,19 +19,30 @@
 						 4.	A TestNG annotation starts from the symbol "@".   
 						 
   Types of TestNG Annotations -->
-  		1. @BeforeSuite - The @BeforeSuite method in TestNG runs before the execution of all other test methods in the suite.
-		2. @AfterSuite - The @AfterSuite method in TestNG runs after the execution of all other test methods in the suite.
-		3. @BeforeTest - The @BeforeTest method in TestNG runs before the execution of all the test methods of available classes belonging to that folder.
-		4. @AfterTest - The @AfterTest method in TestNG executes after the execution of all the test methods of available classes belonging to that folder.
-		5. @BeforeClass - The @BeforeClass method in TestNG will run before the first method of the current class is invoked.
-		6. @AfterClass - The @AfterClass method in TestNG will execute after the execution of all the test methods of the current class.
-		7. @BeforeMethod - The @BeforeMethod method in TestNG will execute before each test method.
-		8. @AfterMethod - The @AfterMethod method in TestNG will run after each test method is executed.
+  		1. @BeforeSuite - Runs once before all tests in the suite. Ideal for setting up global configurations
+		2. @AfterSuite - Runs once after all tests in the suite. Used for cleanup.
+		3. @BeforeTest - Runs once before any test methods in the <test> tag of your XML suite(testng.xml).Runs once per <test> tag, not per class or method.
+		4. @AfterTest - Runs after all test methods in the <test> tag.
+		5. @BeforeClass - Runs once before the first method in the current class. Great for initializing shared resources.
+		6. @AfterClass - Runs once after all methods in the current class.
+		7. @BeforeMethod - Runs before each @Test method. Ideal for resetting test state.
+		8. @AfterMethod - Runs after each @Test method. Useful for cleanup between tests.
 		9. @BeforeGroups - The @BeforeGroups annotated method run only once for a group before the execution of all test cases belonging to that group.
 		10. @AfterGroups - The @AfterGroups annotated method run only once for a group after the execution of all test cases belonging to that group.
-		11. @Test
-		12. @DataProvider
-		13. @Parameters				               
+		11. @Test - Runs a test method. You can add attributes like priority, dependsOnMethods, enabled, etc.
+		12. @DataProvider - Supplies data to a test method. Enables data-driven testing.
+		13. @Parameters	- Injects parameters from your XML suite file
+		14. @Listeners- Attaches custom listeners for logging, reporting, etc.
+
+		<suite name="MySuite">
+            <test name="LoginTests">
+                <classes>
+                    <class name="com.demo.LoginTest"/>
+                    <class name="com.demo.DashboardTest"/>
+                </classes>
+            </test>
+        </suite>
+
                    
   Hierarchy of the TestNG Annotations:
    		1. @BeforeSuite
@@ -44,8 +55,8 @@
 		8. @AfterTest
 		9. @AfterSuite
 		
-  Importance Of testng.xml file --> In a selenium testng project, we use testng.xml fileto configure the complete test suite in a single file.
- 									It is a heart of testng framework. This is also called runner file. Some fetures are:
+  Importance Of testng.xml file --> In a selenium testng project, we use testng.xml file to configure the complete test suite in a single file.
+ 									It is a heart of testng framework. This is also called runner file. Some features are:
  									
   									1. It allows to include or exclude the execution of test methods and test groups.
   									2. It allows pass parameters to the test cases
@@ -88,12 +99,23 @@
   	 	1. tests --> All the test cases inside <test> tag of testng.xml file will run parallel.
   	 	2. classes --> All the test cases inside a java class will run parallel.
   	 	3. methods --> All the methods with @Test annotation will execute parallel
-  	 	4. instances --> Test cases in same instance will execute parallel but tow methods of two different instances will run in different thread.
+  	 	4. instances --> Test cases in same instance will execute parallel but two methods of two different instances will run in different thread.
   	 	
   Q. verbose in testng.xml	 	 
   A. 1. you will get more detailed console output of you test cases.
      2. If you keep increasing the value of verbose, you will get more detailed console output of you test cases.
-     3. you can give only 1-10 count in verbose. 1 will give basic output, 10 will give more detailed output
+     3. you can give only 0-10 count in verbose. 0 will give basic output, 10 will give more detailed output
+
+  Thread-count-->
+  1. The thread-count attribute in TestNG controls how many threads will be used to run your tests in parallel.
+  2. Minimum: 1
+     - A value of 0 is invalid and will cause TestNG to ignore parallel execution or throw an error.
+     Maximum: There’s no hard upper limit, but it depends on:
+     - Your CPU core count
+     - Memory availability
+     - Browser driver stability (e.g., too many Chrome instances can crash your system)
+
+
   
                     
                    

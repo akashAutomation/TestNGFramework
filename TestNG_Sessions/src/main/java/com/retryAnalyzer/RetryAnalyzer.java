@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 public class RetryAnalyzer implements IRetryAnalyzer{
 
 	/*
-	 * 1. IRetryAnalyzer is an interface and use for to execute failed test cases at @Test level. 
+	 * 1. IRetryAnalyzer is an interface and used for to execute failed test cases at @Test level.
 	 * 2. retry() is present in IRetryAnalyzer so we have to override this method in our class.
 	 * 		boolean retry(ITestResult result); --> this is a declaration of retry()
 	 */

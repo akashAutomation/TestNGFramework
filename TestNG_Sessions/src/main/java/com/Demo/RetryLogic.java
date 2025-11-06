@@ -9,8 +9,8 @@ import com.retryAnalyzer.RetryAnalyzer;
 public class RetryLogic {
 	/*
 	 * 1. we can implement retry logic in 2 way: 
-	 * 		1. @Test level --> we can provide "retryAnalyzer" attribute in @Test. But this is not a good approach because if there more than
-	 * 						   100 test cases then it is difficult to do retry each test cases and also time consuming. 
+	 * 		1. @Test level --> we can provide "retryAnalyzer" attribute in @Test. But this is not a good approach because if there are more than
+	 * 						   100 test cases then it is difficult to do retry each test cases and also time-consuming.
 	 * 		2. Run time --> by using "IAnnotationTransformer" interface
 	 * 
 	 *  
